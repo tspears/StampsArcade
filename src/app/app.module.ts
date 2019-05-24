@@ -4,15 +4,21 @@ import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { SystemComponent } from './system/system.component';
+import { StatusTableComponent } from './status-table/status-table.component';
+
+import {TableModule} from 'primeng/table';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SystemComponent
+    SystemComponent,
+    StatusTableComponent
   ],
   imports: [
     BrowserModule,
-    CommonModule
+    CommonModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
