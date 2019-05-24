@@ -4,7 +4,6 @@
   </h1>
   <img width="300" alt="Angular Logo" src="./assets/arcade.ico">
 </div>
-<app-system name="Nintendo Switch"></app-system>
-<app-system name="Playstation 4"></app-system>
-<app-system name="Arcade Cabinet"></app-system>
-
+<div *ngFor="let system of systems">
+  <app-system name="{{system.name}}" status="{{system.status}}"></app-system>
+</div>

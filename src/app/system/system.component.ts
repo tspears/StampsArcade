@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SystemComponent implements OnInit {
   @Input() name: string;
-  status : String = 'Available';
+  @Input() status: string;
 
   constructor() { }
 
