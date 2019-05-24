@@ -8,10 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SystemComponent implements OnInit {
   @Input() name: string;
   @Input() status: string;
+  @Input() updated: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  formatDate(dateString) {
+    var date = new Date(dateString);
+    return date.toLocaleTimeString();
   }
 
 }
