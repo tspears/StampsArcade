@@ -13,8 +13,8 @@ export class StatusTableComponent {
   constructor() { }
 
   formatDate(dateString) {
-    var date = new Date(dateString);
-    var seconds = Math.floor((new Date() - date) / 1000);
+    var date = +new Date(dateString);
+    var seconds = Math.floor((+new Date() - date) / 1000);
     var interval = Math.floor(seconds / 86400);
     var updatedString = '';
 
