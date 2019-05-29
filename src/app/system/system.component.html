@@ -1,4 +1,5 @@
 <div class="system-status">
-  {{name}} is currently
-  <span>{{status}}</span>
+  <span>{{name}} is currently</span>
+  <span>{{status === 'true' ? 'Available  ' : 'In Use  '}}</span>
+  <span>{{formatDate(updated)}}</span>
 </div>
