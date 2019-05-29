@@ -4,8 +4,4 @@
   </h1>
   <img width="300" alt="Angular Logo" src="./assets/arcade.ico">
 </div>
-<div *ngFor="let system of systems">
-  <app-system name="{{system.name}}" status="{{system.status}}" updated="{{system.updated}}"></app-system>
-</div>
-
 <app-status-table [systems]="systems"></app-status-table>

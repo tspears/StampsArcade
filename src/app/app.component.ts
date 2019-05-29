@@ -19,8 +19,16 @@ export class AppComponent {
   systems = [];
 
   constructor(afDb: AngularFireDatabase) {
+    this.getData(afDb);
+    setInterval(() => {
+      console.log(111);
+      this.getData(afDb);
+ }, 300000);
+  }
+
+  getData(afDb: AngularFireDatabase) {
     afDb.list('systems').valueChanges().subscribe((data) => {
-      this.systems = data;
-    });
+    this.systems = data;
+  });
   }
 }

@@ -9,7 +9,7 @@
   <ng-template pTemplate="body" let-system>
       <tr>
           <td>{{system.name}}</td>
-          <td>{{system.status === 'true' ? 'Available  ' : 'In Use  '}}</td>
+          <td [ngClass]="{'available': system.status === 'true','in-use': system.status === 'false'}">{{system.status === 'true' ? 'Available  ' : 'In Use  '}}</td>
           <td>{{formatDate(system.updated)}}</td>
       </tr>
   </ng-template>
