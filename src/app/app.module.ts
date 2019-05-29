@@ -6,6 +6,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
 import { SystemComponent } from './system/system.component';
+import { StatusTableComponent } from './status-table/status-table.component';
+
+import {TableModule} from 'primeng/table';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCS6Gv5dJ2c8oaSDjDKbd1eNy-50czyzM4",
@@ -20,11 +24,13 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    SystemComponent
+    SystemComponent,
+    StatusTableComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
+    TableModule,
     AngularFireModule.initializeApp(firebaseConfig, 'arcade-status'),
     AngularFireDatabaseModule
   ],

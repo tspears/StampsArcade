@@ -4,7 +4,14 @@ import { AngularFireDatabase, AngularFireList  } from 'angularfire2/database';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styles: [
+    "node_modules/primeicons/primeicons.css",
+    "node_modules/primeng/resources/themes/nova-light/theme.css",
+    "node_modules/primeng/resources/primeng.min.css"
+  ],
+  styleUrls: [
+    './app.component.css'
+  ]
 })
 
 export class AppComponent {
@@ -14,7 +21,6 @@ export class AppComponent {
   constructor(afDb: AngularFireDatabase) {
     afDb.list('systems').valueChanges().subscribe((data) => {
       this.systems = data;
-      console.log(this.systems);
     });
   }
 }

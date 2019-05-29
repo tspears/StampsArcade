@@ -7,3 +7,5 @@
 <div *ngFor="let system of systems">
   <app-system name="{{system.name}}" status="{{system.status}}" updated="{{system.updated}}"></app-system>
 </div>
+
+<app-status-table [systems]="systems"></app-status-table>
