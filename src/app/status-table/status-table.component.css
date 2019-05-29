@@ -1,0 +1,19 @@
+tr {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+td {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.available {
+  background-color: green !important;
+  color: white !important;
+ }
+.in_use {
+  background-color: red !important;
+}
+

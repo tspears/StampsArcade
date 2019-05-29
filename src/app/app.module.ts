@@ -5,7 +5,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
-import { SystemComponent } from './system/system.component';
 import { StatusTableComponent } from './status-table/status-table.component';
 
 import {TableModule} from 'primeng/table';
@@ -24,7 +23,6 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    SystemComponent,
     StatusTableComponent
   ],
   imports: [
