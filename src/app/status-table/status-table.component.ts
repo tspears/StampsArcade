@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-status-table',
@@ -6,18 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./status-table.component.css']
 })
 
-export class StatusTableComponent implements OnInit {
-  systems = [
-    {
-      name: 'Switch',
-      status: 'In Use',
-      updated: new Date().toDateString()
-    }
-  ];
+export class StatusTableComponent {
+  @Input() systems: any[];
+
 
   constructor() { }
 
-  ngOnInit() {
+  formatDate(dateString) {
+    var date = new Date(dateString);
+    return date.toLocaleTimeString();
   }
 
 }

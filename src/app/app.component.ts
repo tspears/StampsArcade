@@ -21,7 +21,6 @@ export class AppComponent {
   constructor(afDb: AngularFireDatabase) {
     afDb.list('systems').valueChanges().subscribe((data) => {
       this.systems = data;
-      console.log(this.systems);
     });
   }
 }
