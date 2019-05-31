@@ -24,9 +24,9 @@ export class AppComponent {
     setInterval(() => {
       const time = new Date();
 
-      const hr = time.getHours();
+      let hr = time.getHours();
       const min = time.getMinutes();
-      const sec = time.getSeconds();
+      let sec = time.getSeconds();
 
       if (hr > 12) {
         hr = hr - 12;
