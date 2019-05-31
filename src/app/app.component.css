@@ -1,0 +1,16 @@
+.header-image {
+	width: 50vw;
+}
+
+.clock-wrapper {	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.clock-face {
+	color: #fff;
+	font-size: 5rem;
+	font-weight: bold;
+	font-family: 'Abel';
+}

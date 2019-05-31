@@ -15,20 +15,36 @@ import { AngularFireDatabase, AngularFireList  } from 'angularfire2/database';
 })
 
 export class AppComponent {
-  title = 'Stamps.com Arcade Room Status Page';
   systems = [];
+  parsedTime = '';
 
   constructor(afDb: AngularFireDatabase) {
     this.getData(afDb);
+
     setInterval(() => {
-      console.log(111);
-      this.getData(afDb);
- }, 300000);
+      const time = new Date();
+
+      const hr = time.getHours();
+      const min = time.getMinutes();
+      const sec = time.getSeconds();
+
+      if (hr > 12) {
+        hr = hr - 12;
+      }
+
+      if (sec < 10) {
+        sec = `0${sec}`;
+      }
+
+      this.parsedTime = `${hr}:${min}:${sec}`;
+    }, 1000)
   }
 
   getData(afDb: AngularFireDatabase) {
     afDb.list('systems').valueChanges().subscribe((data) => {
-    this.systems = data;
-  });
+      this.systems = data;
+    });
   }
+
+
 }
