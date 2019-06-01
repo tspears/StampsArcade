@@ -26,17 +26,13 @@ export class AppComponent {
 
       let hr = time.getHours();
       const min = time.getMinutes();
-      let sec = time.getSeconds();
+      const sec = time.getSeconds();
 
       if (hr > 12) {
         hr = hr - 12;
       }
 
-      if (sec < 10) {
-        sec = `0${sec}`;
-      }
-
-      this.parsedTime = `${hr}:${min}:${sec}`;
+      this.parsedTime = `${hr < 10 ? `0${hr}` : hr}:${min < 10 ? `0${min}` : min}:${sec < 10 ? `0${sec}` : sec}`;
     }, 1000)
   }
 
