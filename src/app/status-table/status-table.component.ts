@@ -9,7 +9,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class StatusTableComponent {
   @Input() systems: any[];
 
-
   constructor() { }
 
   formatDate(dateString) {
