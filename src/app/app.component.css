@@ -1,16 +1,17 @@
 .header-image {
-	width: 50vw;
+  height: 10vh;
+  margin: 3vh auto;
 }
 
-.clock-wrapper {	
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.clock-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .clock-face {
-	color: #fff;
-	font-size: 5rem;
-	font-weight: bold;
-	font-family: 'Abel';
+  color: #fff;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: "Abel";
 }
