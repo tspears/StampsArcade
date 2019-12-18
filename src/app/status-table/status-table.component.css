@@ -2,11 +2,14 @@ td {
   text-align: center;
   font-size: 1.5rem;
 }
+td.last-updated {
+  font-size: 1rem;
+}
 .available {
-  background-color: #49BAB7 !important;
+  background-color: #49bab7 !important;
   color: white !important;
- }
+}
 .in-use {
-  background-color: #FF0053 !important;
+  background-color: #ff0053 !important;
   color: white !important;
 }
